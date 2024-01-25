@@ -1,5 +1,12 @@
 header {
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(102, 102, 102);
     width: 100%;
     aspect-ratio: 25 / 1;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: rgb(138, 138, 138);
+    width: 20%;
+    aspect-ratio: 1 / 5;
 }
