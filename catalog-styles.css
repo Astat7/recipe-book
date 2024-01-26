@@ -10,3 +10,14 @@ header {
     width: 20%;
     aspect-ratio: 1 / 5;
 }
+
+form {
+    background-color: rgb(190, 190, 190);
+    margin: auto;
+    margin-top: 5%;
+    width: 95%;
+}
+
+form>h3 {
+    font-size: large;
+}
