@@ -21,3 +21,19 @@ form {
 form>h3 {
     font-size: large;
 }
+
+.menu {
+    background-color: aqua;
+    width: 80%;
+    float: right;
+    z-index: 5;
+}
+
+.dish {
+    background-color: grey;
+    width: 19.5%;
+    aspect-ratio: 2 / 1;
+    float: left;
+    margin-left: 0.5%;
+    margin-top: 0.5%;
+}
