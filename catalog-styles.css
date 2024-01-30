@@ -1,5 +1,7 @@
 body {
+    background-color: rgb(197, 197, 197);
     overflow-x: hidden;
+    font-size: 1vw;
 }
 
 header {
@@ -8,7 +10,7 @@ header {
     aspect-ratio: 25 / 1;
 }
 
-.sidebar {
+#sidebar {
     position: fixed;
     background-color: rgb(138, 138, 138);
     width: 20%;
@@ -26,8 +28,7 @@ form>h3 {
     font-size: large;
 }
 
-.menu {
-    background-color: aqua;
+#menu {
     width: 79.75%;
     float: right;
     z-index: 5;
@@ -49,8 +50,15 @@ form>h3 {
 }
 
 .desc {
-    visibility: hidden;
+    display: none;
     background-color: rgb(143, 143, 143);
     width: 95%;
     top: 10%;
+}
+
+#filterButton {
+    margin-top: 10%;
+    margin-right: 10%;
+    border-radius: 5px;
+    float: right;
 }
