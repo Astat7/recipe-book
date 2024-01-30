@@ -16,7 +16,7 @@
             <a href="#">Other</a>
         </nav>
     </header>
-    <div class="sidebar">
+    <div id="sidebar">
         <input type="checkbox" value="whitelist" name="whitelistOption" id="whitelistBox">
         <label for="whitelistBox">Switch to whitelist</label>
 
@@ -52,6 +52,23 @@
             <label for="dinnerBox">Dinner</label>
         </form>
         <form>
+            <h3>Recipe Category</h3>
+            <input type="checkbox" id="meatBox">
+            <label for="meatBox">Meat</label> <br>
+            <input type="checkbox" id="meatFreeBox">
+            <label for="meatFreeBox">Meat free</label> <br>
+            <input type="checkbox" id="sauceBox">
+            <label for="sauceBox">Sauce</label> <br>
+            <input type="checkbox" id="pastaBox">
+            <label for="pastaBox">Pasta</label> <br>
+            <input type="checkbox" id="saladBox">
+            <label for="saladBox">Salad</label> <br>
+            <input type="checkbox" id="sweetfoodBox">
+            <label for="sweetfoodBox">Sweet food</label> <br>
+            <input type="checkbox" id="drinkBox">
+            <label for="drinkBox">Drink</label>
+        </form>
+        <form>
             <h3>Tolerance</h3>
             <input type="checkbox" id="veganBox">
             <label for="veganBox">Vegan</label> <br>
@@ -72,41 +89,42 @@
             <input type="checkbox" id="spicyBox">
             <label for="spicyBox">Spicy</label>
         </form>
+        <button id="filterButton" onclick="filter()">Filter menu</button>
     </div>
-    <div class="menu">
-        <div class="dish">
+    <div id="menu">
+        <div class="dish breakfast">
+            <h2>Pancakes</h2>
             <div class="desc">
                 Test
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish">
+        <div class="dish soup">
+            <h2>Chicken soup</h2>
             <div class="desc">
                 Test
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish">
+        <div class="dish course">
+            <h2>Steamed kohlrabi</h2>
             <div class="desc">
                 Test
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish">
+        <div class="dish dessert">
+            <h2>Quick cake</h2>
             <div class="desc">
                 Test
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish">
+        <div class="dish lowPrice lowDifficulty dinner meatFree salad">
+            <h2>Chicory salad</h2>
             <div class="desc">
-                Test
-            </div>
-            <button onclick="showInfo(this)">Info</button>
-        </div>
-        <div class="dish">
-            <div class="desc">
-                Test
+                <p>Dinner, Meat Free, Salad<br>
+                </p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
