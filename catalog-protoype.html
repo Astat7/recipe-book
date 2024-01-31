@@ -63,8 +63,8 @@
             <label for="pastaBox">Pasta</label> <br>
             <input type="checkbox" id="saladBox">
             <label for="saladBox">Salad</label> <br>
-            <input type="checkbox" id="sweetfoodBox">
-            <label for="sweetfoodBox">Sweet food</label> <br>
+            <input type="checkbox" id="sweetFoodBox">
+            <label for="sweetFoodBox">Sweet food</label> <br>
             <input type="checkbox" id="drinkBox">
             <label for="drinkBox">Drink</label>
         </form>
@@ -90,41 +90,41 @@
             <label for="spicyBox">Spicy</label>
         </form>
         <button id="filterButton" onclick="filter()">Filter menu</button>
+        <button id="filterResetButton" onclick="resetFilter()">Reset filters</button>
     </div>
     <div id="menu">
-        <div class="dish breakfast">
+        <div class="dish lowPrice lowDifficulty breakfast sweetFood vegetarian lactose">
             <h2>Pancakes</h2>
             <div class="desc">
-                Test
+                <p>Breakfast, Sweet food, Vegetarian, Lactose</p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish soup">
+        <div class="dish medPrice lowDifficulty soup">
             <h2>Chicken soup</h2>
             <div class="desc">
-                Test
+                <p>Soup</p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish course">
+        <div class="dish lowPrice lowDifficulty course meatFree vegetarian">
             <h2>Steamed kohlrabi</h2>
             <div class="desc">
-                Test
+                <p>Main course, Meat free, Vegetarian</p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish dessert">
+        <div class="dish lowPrice medDifficulty dessert sweetFood vegetarian gluten meatFree">
             <h2>Quick cake</h2>
             <div class="desc">
-                Test
+                <p>Dessert, Meat free, Sweet food, Vegetarian, Gluten</p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
-        <div class="dish lowPrice lowDifficulty dinner meatFree salad">
+        <div class="dish lowPrice lowDifficulty dinner meatFree salad vegetarian">
             <h2>Chicory salad</h2>
             <div class="desc">
-                <p>Dinner, Meat Free, Salad<br>
-                </p>
+                <p>Dinner, Meat free, Salad, Vegetarian</p>
             </div>
             <button onclick="showInfo(this)">Info</button>
         </div>
