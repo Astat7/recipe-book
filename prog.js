@@ -26,25 +26,40 @@ forms.forEach(function(item){
 
 function toggleDisplay(name, val){
     recipes.forEach(function(item){
-        console.log(item)
         if(item.classList.contains(name)){
             item.style.display = val;
         }
     });
 }
 
+function resetFilter(){
+    whiteBox.checked = false;
+    boxes.forEach(function(item){
+        item.checked = false;
+    });
+    recipes.forEach(function(item){
+        item.style.display = "block";
+    });
+}
+
 function filter(){
+    if(whiteBox.checked == false){
+        recipes.forEach(function(item){
+            item.style.display = "block";
+        });
+    }else{
+        recipes.forEach(function(item){
+            item.style.display = "none";
+        });
+    }
+
     boxes.forEach(function(item){
         if(whiteBox.checked == false){
             if(item.checked == true){
                 toggleDisplay(item.id.replace("Box", ""), "none");
-            }else{
-                toggleDisplay(item.id.replace("Box", ""), "block");
             };
         }else{
-            if(item.checked == false){
-                toggleDisplay(item.id.replace("Box", ""), "none");
-            }else{
+            if(item.checked == true){
                 toggleDisplay(item.id.replace("Box", ""), "block");
             };
         };
