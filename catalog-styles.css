@@ -33,7 +33,7 @@ form>h3 {
     float: right;
     z-index: 5;
     display: grid;
-    grid-template-columns: repeat(5, 19.5%);
+    grid-template-columns: repeat(auto-fill, minmax(19.5%, 7cm));
     grid-template-rows: max-content;
     column-gap: 0.5%;
     row-gap: 2%;
@@ -42,6 +42,7 @@ form>h3 {
 }
 
 .dish {
+    font-size: 1rem;
     background-color: grey;
     aspect-ratio: 2 / 1;
     /*float: left;
