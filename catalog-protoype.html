@@ -95,6 +95,166 @@
     <div id="menu">
         <div class="dish lowPrice lowDifficulty breakfast sweetFood vegetarian lactose">
             <h2>Pancakes</h2>
+            <p>Low pirce, Low difficulty</p>
+            <div class="desc">
+                <ul>
+                    <li>Breakfast</li>
+                    <li>Sweet food</li>
+                    <li>Vegetarian</li>
+                    <li>Lactose</li>
+                </ul>
+            </div>
+            <button onclick="showInfo(this)">></button>
+        </div>
+        <div class="dish medPrice lowDifficulty soup">
+            <h2>Chicken soup</h2>
+            <p>Medium pirce, Low difficulty</p>
+            <div class="desc">
+                <ul>
+                    <li>Soup</li>
+                </ul>
+            </div>
+            <button onclick="showInfo(this)">></button>
+        </div>
+        <div class="dish lowPrice lowDifficulty course meatFree vegetarian">
+            <h2>Steamed kohlrabi</h2>
+            <p>Low pirce, Low difficulty</p>
+            <div class="desc">
+                <ul>
+                    <li>Main course</li>
+                    <li>Meat free</li>
+                    <li>Vegetarian</li>
+                </ul>
+            </div>
+            <button onclick="showInfo(this)">></button>
+        </div>
+        <div class="dish lowPrice medDifficulty dessert sweetFood vegetarian gluten meatFree">
+            <h2>Quick cake</h2>
+            <p>Low pirce, Medium difficulty</p>
+            <div class="desc">
+                <ul>
+                    <li>Dessert</li>
+                    <li>Meat free</li>
+                    <li>Sweet food</li>
+                    <li>Vegetarian</li>
+                    <li>Gluten</li>
+                </ul>
+            </div>
+            <button onclick="showInfo(this)">></button>
+        </div>
+        <div class="dish lowPrice lowDifficulty dinner meatFree salad vegetarian">
+            <h2>Chicory salad</h2>
+            <p>Low pirce, Low difficulty</p>
+            <div class="desc">
+                <ul>
+                    <li>Dinner</li>
+                    <li>Meat free</li>
+                    <li>Salad</li>
+                    <li>Vegetarian</li>
+                </ul>
+            </div>
+            <button onclick="showInfo(this)">></button>
+        </div>
+    </div>
+    <script src="prog.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="catalog-styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Contacts</a>
+            <a href="#">Other</a>
+        </nav>
+    </header>
+    <div id="sidebar">
+        <input type="checkbox" value="whitelist" name="whitelistOption" id="whitelistBox">
+        <label for="whitelistBox">Switch to whitelist</label>
+
+        <form>
+            <h3>Price</h3>
+            <input type="checkbox" id="lowPriceBox">
+            <label for="lowPriceBox">Low</label> <br>
+            <input type="checkbox" id="medPriceBox">
+            <label for="medPriceBox">Medium</label> <br>
+            <input type="checkbox" id="highPriceBox">
+            <label for="highPriceBox">High</label>
+        </form>
+        <form>
+            <h3>Difficulty</h3>
+            <input type="checkbox" id="lowDifficultyBox">
+            <label for="lowDifficultyBox">Low</label> <br>
+            <input type="checkbox" id="medDifficultyBox">
+            <label for="medDifficultyBox">Medium</label> <br>
+            <input type="checkbox" id="highDifficultyBox">
+            <label for="highDifficultyBox">High</label>
+        </form>
+        <form>
+            <h3>Dish Category</h3>
+            <input type="checkbox" id="breakfastBox">
+            <label for="breakfastBox">Breakfast</label> <br>
+            <input type="checkbox" id="soupBox">
+            <label for="soupBox">Soup</label> <br>
+            <input type="checkbox" id="courseBox">
+            <label for="courseBox">Main course</label> <br>
+            <input type="checkbox" id="dessertBox">
+            <label for="dessertBox">Dessert</label> <br>
+            <input type="checkbox" id="dinnerBox">
+            <label for="dinnerBox">Dinner</label>
+        </form>
+        <form>
+            <h3>Recipe Category</h3>
+            <input type="checkbox" id="meatBox">
+            <label for="meatBox">Meat</label> <br>
+            <input type="checkbox" id="meatFreeBox">
+            <label for="meatFreeBox">Meat free</label> <br>
+            <input type="checkbox" id="sauceBox">
+            <label for="sauceBox">Sauce</label> <br>
+            <input type="checkbox" id="pastaBox">
+            <label for="pastaBox">Pasta</label> <br>
+            <input type="checkbox" id="saladBox">
+            <label for="saladBox">Salad</label> <br>
+            <input type="checkbox" id="sweetFoodBox">
+            <label for="sweetFoodBox">Sweet food</label> <br>
+            <input type="checkbox" id="drinkBox">
+            <label for="drinkBox">Drink</label>
+        </form>
+        <form>
+            <h3>Tolerance</h3>
+            <input type="checkbox" id="veganBox">
+            <label for="veganBox">Vegan</label> <br>
+            <input type="checkbox" id="vegetarianBox">
+            <label for="vegetarianBox">Vegetarian</label> <br>
+            <input type="checkbox" id="lactoseBox">
+            <label for="lactoseBox">Lactose</label> <br>
+            <input type="checkbox" id="glutenBox">
+            <label for="glutenBox">Gluten</label> <br>
+            <input type="checkbox" id="nutsBox">
+            <label for="nutsBox">Nuts</label> <br>
+            <input type="checkbox" id="seafoodBox">
+            <label for="seafoodBox">Sea food</label> <br>
+            <input type="checkbox" id="mushroomsBox">
+            <label for="mushroomsBox">Mushrooms</label> <br>
+            <input type="checkbox" id="alcoholBox">
+            <label for="alcoholBox">Alcohol</label> <br>
+            <input type="checkbox" id="spicyBox">
+            <label for="spicyBox">Spicy</label>
+        </form>
+        <button id="filterButton" onclick="filter()">Filter menu</button>
+        <button id="filterResetButton" onclick="resetFilter()">Reset filters</button>
+    </div>
+    <div id="menu">
+        <div class="dish lowPrice lowDifficulty breakfast sweetFood vegetarian lactose">
+            <h2>Pancakes</h2>
             <div class="desc">
                 <p>Breakfast, Sweet food, Vegetarian, Lactose</p>
             </div>
