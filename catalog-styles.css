@@ -1,17 +1,22 @@
 body {
     background-color: rgb(197, 197, 197);
     overflow-x: hidden;
-    font-size: 1vw;
+    font-size: 1.1rem;
 }
 
 header {
+    position: relative;
     background-color: rgb(102, 102, 102);
     width: 100%;
-    aspect-ratio: 25 / 1;
+    height: 5rem;
+    z-index: 2;
 }
 
 #sidebar {
     position: fixed;
+    padding-top: 5rem;
+    top: 0;
+    overflow-y: auto;
     background-color: rgb(138, 138, 138);
     width: 20%;
     aspect-ratio: 1 / 5;
@@ -25,13 +30,13 @@ form {
 }
 
 form>h3 {
-    font-size: large;
+    font-size: 1.2rem;
 }
 
 #menu {
     width: 79.75%;
     float: right;
-    z-index: 5;
+    z-index: 3;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(19.5%, 7cm));
     grid-template-rows: max-content;
@@ -42,19 +47,32 @@ form>h3 {
 }
 
 .dish {
-    font-size: 1rem;
+    position: relative;
     background-color: grey;
-    aspect-ratio: 2 / 1;
-    /*float: left;
-    margin-left: 0.5%;
-    margin-top: 0.5%;*/
+    height: 3rem;
+}
+
+.dish>h2 {
+    font-size: 1.8rem;
+}
+
+.dish>button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+    transform: rotate(90deg);
+    font-size: 1rem;
 }
 
 .desc {
+    position: absolute;
     display: none;
     background-color: rgb(143, 143, 143);
-    width: 95%;
-    top: 10%;
+    width: 100%;
+    top: 100%;
+    z-index: 5;
 }
 
 #filterResetButton {
