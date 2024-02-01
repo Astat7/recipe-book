@@ -5,9 +5,11 @@ function showInfo(obj) {
     let styl = window.getComputedStyle(descr);
 
     if (styl.display == "none") {
-        descr.style.display = "initial";
+        descr.style.display = "block";
+        obj.style.transform = "rotate(-90deg)"
     }else{
         descr.style.display = "none";
+        obj.style.transform = "rotate(90deg)"
     }
 }
 
