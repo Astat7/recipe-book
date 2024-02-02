@@ -13,13 +13,13 @@ header {
 }
 
 #sidebar {
-    position: fixed;
     padding-top: 5rem;
+    position: fixed;
     top: 0;
     overflow-y: auto;
     background-color: rgb(138, 138, 138);
     width: 20%;
-    aspect-ratio: 1 / 5;
+    height: 100vh;
 }
 
 form {
@@ -58,9 +58,9 @@ form>h3 {
 
 .dish>button {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
-    width: 1rem;
+    right: 0.75rem;
+    top: 0.75rem;
+    width: 1.5rem;
     aspect-ratio: 1 / 1;
     transform: rotate(90deg);
     font-size: 1rem;
