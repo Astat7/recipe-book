@@ -18,8 +18,18 @@
         </nav>
     </header>
     <div id="sidebar">
-        <input type="checkbox" value="whitelist" name="whitelistOption" id="whitelistBox">
-        <label for="whitelistBox">Switch to whitelist</label>
+        <div class="sidebarOptions">
+            <label for="whitelistBox" class="sidebarInputs"><input type="checkbox" value="whitelist" name="whitelistOption" id="whitelistBox"> Switch to whitelist</label>
+            <button class="sidebarInputs" onclick="resetFilter()">Reset filters</button>
+            <button class="sidebarInputs" onclick="filter()">Filter menu</button>
+        </div>
+        <div class="sidebarOptions">
+            <h3>Sort</h3>
+            <label for="reversedBox" class="sidebarInputs sortInputs"><input type="checkbox" value="reversed" name="reversedOption" id="reversedBox"> Reverse order</label>
+            <button class="sidebarInputs sortInputs" onclick="sortName()">Sort by name</button>
+            <button class="sidebarInputs sortInputs" onclick="sortPrice()">Sort by price</button>
+            <button class="sidebarInputs sortInputs" onclick="sortDifficulty()">Sort by difficulty</button>
+        </div>
 
         <form>
             <h3>Price</h3>
@@ -63,13 +73,11 @@
             <label for="alcoholBox"><input type="checkbox" id="alcoholBox"> Alcohol</label>
             <label for="spicyBox"><input type="checkbox" id="spicyBox"> Spicy</label>
         </form>
-        <button id="filterButton" onclick="filter()">Filter menu</button>
-        <button id="filterResetButton" onclick="resetFilter()">Reset filters</button>
     </div>
     <div id="menu">
         <div class="dish lowPrice lowDifficulty breakfast sweetFood vegetarian lactose">
             <h2>Pancakes</h2>
-            <p>Low pirce, Low difficulty</p>
+            <p>Low price, Low difficulty</p>
             <div class="desc">
                 <ul>
                     <li>Breakfast</li>
@@ -82,7 +90,7 @@
         </div>
         <div class="dish medPrice lowDifficulty soup">
             <h2>Chicken soup</h2>
-            <p>Medium pirce, Low difficulty</p>
+            <p>Medium price, Low difficulty</p>
             <div class="desc">
                 <ul>
                     <li>Soup</li>
@@ -92,7 +100,7 @@
         </div>
         <div class="dish lowPrice lowDifficulty course meatFree vegetarian">
             <h2>Steamed kohlrabi</h2>
-            <p>Low pirce, Low difficulty</p>
+            <p>Low price, Low difficulty</p>
             <div class="desc">
                 <ul>
                     <li>Main course</li>
@@ -104,7 +112,7 @@
         </div>
         <div class="dish lowPrice medDifficulty dessert sweetFood vegetarian gluten meatFree">
             <h2>Quick cake</h2>
-            <p>Low pirce, Medium difficulty</p>
+            <p>Low price, Medium difficulty</p>
             <div class="desc">
                 <ul>
                     <li>Dessert</li>
@@ -118,7 +126,7 @@
         </div>
         <div class="dish lowPrice lowDifficulty dinner meatFree salad vegetarian">
             <h2>Chicory salad</h2>
-            <p>Low pirce, Low difficulty</p>
+            <p>Low price, Low difficulty</p>
             <div class="desc">
                 <ul>
                     <li>Dinner</li>
@@ -130,6 +138,7 @@
             <button onclick="showInfo(this)">></button>
         </div>
     </div>
+    <div id="temp"></div>
     <script src="prog.js"></script>
 </body>
 </html>
