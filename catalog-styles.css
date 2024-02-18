@@ -85,6 +85,10 @@ form>label:hover {
     background-color: rgb(77, 146, 163);
 }
 
+#lastForm {
+    margin-bottom: 6rem;
+}
+
 .sidebarOptions {
     background-color: rgb(138, 218, 221);
     margin: auto;
@@ -169,7 +173,7 @@ form>label:hover {
     color: black;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 780px){
     body {
         overflow-y: scroll;
     }
@@ -177,7 +181,7 @@ form>label:hover {
         position: static;
         width: 100%;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
         height: fit-content;
     }
     #menu {
@@ -192,5 +196,9 @@ form>label:hover {
     }
     .dish {
         width: 100%;
+    }
+
+    #lastForm {
+        margin-bottom: 0;
     }
 }
