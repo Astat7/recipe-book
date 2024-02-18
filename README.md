@@ -2,7 +2,7 @@
 ## Sidebar
 Sidebar contains options for filtering and sorting the main menu. It is on the left side, but is still considerably big to be easily noticable.
 
-On PC mode it stays on the same place even after menu is scrolled, but has it's own scroll bar.
+On PC mode it stays on the same place even after menu is scrolled, but has it's own scroll bar. This is to make it easily accessible when scrolling through recipes.
 
 On tablet mode it is on the top of the website. It was originally ment to be togglable by a "filters" button in a corner but I did not manage to do that succesfully.
 ## Menu
