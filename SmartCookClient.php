@@ -68,7 +68,7 @@ class SmartCookClient
         if (!empty($this->request_data)) {
             $data = $this->request_data;
             $data["user"] = self::SENDER["id"];
-            $data["time"] = time()+17;
+            $data["time"] = time();
             $data['sign'] = self::createSignature($data, self::SENDER["secret"]);
             return json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         }
