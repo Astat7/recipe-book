@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catalog</title>
 </head>
 <body>
     <header>
         <h1>Smart Cook</h1>
         <nav>
-            <a href="recipe_page.php?recipe_id=1">Home</a>
+            <a href="index.php">Home</a>
             <a href="#">Contacts</a>
             <a href="#">Other</a>
         </nav>
