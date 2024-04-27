@@ -17,6 +17,8 @@ h1 {
     color: white;
     font-size: 3rem;
     width: fit-content;
+    margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 nav {
