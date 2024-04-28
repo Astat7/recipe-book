@@ -1,4 +1,6 @@
 # SMARTCOOK PROJECT - Recipe book template
+## Note
+Filters are WIP and are not working properly
 ## Sidebar
 Sidebar contains options for filtering and sorting the main menu. It is on the left side, but is still considerably big to be easily noticable.
 
