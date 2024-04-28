@@ -46,12 +46,43 @@ h2 {
     position: relative;
     background-color: rgb(201, 226, 224);
     margin: auto;
-    width: 78%;
+    width: 70%;
     min-height: 100vh;
     padding-left: 1%;
     padding-right: 1%;
 }
 
-#infoBox {
-    background-color: purple;
+#ingredientBox {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+.box {
+    background-color: rgb(77, 146, 163);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.box>ul>li {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+
+#ingredientsLine {
+    background-color: rgb(44, 106, 131);
+}
+
+.ingredient {
+    background-color: rgb(77, 146, 163);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    min-width: fit-content;
 }
