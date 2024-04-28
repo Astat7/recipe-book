@@ -53,7 +53,7 @@ foreach ($data["data"] as $key => $value) {
     }
 }
 
-// ingredients handled separatly
+// ingredients are handled separatly
 
 $ingredients = $data["data"]["ingredient"];
 $ingredientText = "";
