@@ -134,6 +134,7 @@ form>label:hover {
     row-gap: 0.5rem;
     padding-top: 0.25%;
     padding-left: 0.25%;
+    padding-bottom: 1rem;
 }
 
 .dish {
@@ -214,6 +215,11 @@ form>label:hover {
     .dish {
         width: 100%;
     }
+
+    #lastForm {
+        margin-bottom: 0;
+    }
+}
 
     #lastForm {
         margin-bottom: 0;
