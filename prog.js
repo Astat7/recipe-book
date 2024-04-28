@@ -82,13 +82,13 @@ const menu = document.getElementById("menu");
 
 const pricesRef = {
     "lowPrice":1,
-    "medPrice":2,
+    "mediumPrice":2,
     "highPrice":3
 }
 
 const difficultyRef = {
     "lowDifficulty":1,
-    "medDifficulty":2,
+    "mediumDifficulty":2,
     "highDifficulty":3
 }
 
@@ -157,6 +157,11 @@ function sortDifficulty(){
         currentRecipes.reverse();
     }
 
+
+    currentRecipes.forEach(function(item){
+        menu.appendChild(item);
+    });
+}
 
     currentRecipes.forEach(function(item){
         menu.appendChild(item);
