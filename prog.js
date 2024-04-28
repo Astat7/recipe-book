@@ -162,8 +162,3 @@ function sortDifficulty(){
         menu.appendChild(item);
     });
 }
-
-    currentRecipes.forEach(function(item){
-        menu.appendChild(item);
-    });
-}
