@@ -34,13 +34,13 @@
         <form>
             <h3>Price</h3>
             <label for="lowPriceBox"><input type="checkbox" id="lowPriceBox"> Low</label>
-            <label for="medPriceBox"><input type="checkbox" id="medPriceBox"> Medium</label>
+            <label for="mediumPriceBox"><input type="checkbox" id="mediumPriceBox"> Medium</label>
             <label for="highPriceBox"><input type="checkbox" id="highPriceBox"> High</label>
         </form>
         <form>
             <h3>Difficulty</h3>
             <label for="lowDifficultyBox"><input type="checkbox" id="lowDifficultyBox"> Low</label>
-            <label for="medDifficultyBox"><input type="checkbox" id="medDifficultyBox"> Medium</label>
+            <label for="mediumDifficultyBox"><input type="checkbox" id="mediumDifficultyBox"> Medium</label>
             <label for="highDifficultyBox"><input type="checkbox" id="highDifficultyBox"> High</label>
         </form>
         <form>
@@ -79,7 +79,7 @@
         <?php
         require_once("SmartCookClient.php");
 
-        $levels = ["low", "med", "high"];
+        $levels = ["low", "medium", "high"];
 
         $request_data = [
             "attributes" => ["id", "name", "author", "price", "difficulty"]
