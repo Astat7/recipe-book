@@ -3,8 +3,15 @@ require_once("SmartCookClient.php");
 
 $htmlText = file_get_contents("recipe_page_template.html");
 
-$prices = array(1=>"cheap", 2=>"medium", 3=>"expensive");
-$difficulties = array(1=>"easy", 2=>"medium", 3=>"hard");
+// data referances
+
+$prices = array("Cheap", "Medium", "Expensive");
+$difficulties = array("Easy", "Medium", "Hard");
+$dishCategories = array("Breakfast", "Soup", "Main course", "Dessert", "Dinner");
+$recipeCategories = array("Soup", "Meat", "Meat free","Dessert", "Sauce", "Pasta", "Salad", "Sweet food", "Drink");
+$tolerances = array("Vegetarian", "Vegan", "Nuts", "Gluten", "Lactose", "Spicy", "Alcohol", "Sea food", "Mushrooms");
+
+// api connection
 
 try {
     $data = (new SmartCookClient)
@@ -15,18 +22,29 @@ try {
     echo $e->getMessage();
 }
 
-$data["data"]["price"] = $prices[$data["data"]["price"]];
-$data["data"]["difficulty"] = $difficulties[$data["data"]["difficulty"]];
+// turn int data into their string form
+
+$data["data"]["price"] = $prices[$data["data"]["price"]-1];
+$data["data"]["difficulty"] = $difficulties[$data["data"]["difficulty"]-1];
 $data["data"]["country"] = strtoupper($data["data"]["country"]);
+
+foreach ($data["data"]["dish_category"] as $key => $item) {
+    $data["data"]["dish_category"][$key] = $dishCategories[$item-1];
+}
+
+foreach ($data["data"]["recipe_category"] as $key => $item) {
+    $data["data"]["recipe_category"][$key] = $recipeCategories[$item-1];
+}
+
+foreach ($data["data"]["tolerance"] as $key => $item) {
+    $data["data"]["tolerance"][$key] = $tolerances[$item-1];
+}
+
+// fill template
 
 foreach ($data["data"] as $key => $value) {
     if ($key == "ingredient") {
-        $arrVal = [];
-        foreach ($value as $ingredient) {
-            array_push($arrVal, $ingredient["name"]);
-        }
-        $arrVal = implode(", ", $arrVal);
-        $htmlText = str_replace('{'.$key.'}', $arrVal, $htmlText);
+        continue;
     } elseif (is_array($value)) {
         $arrVal = implode(", ", $value);
         $htmlText = str_replace('{'.$key.'}', $arrVal, $htmlText);
@@ -34,4 +52,24 @@ foreach ($data["data"] as $key => $value) {
         $htmlText = str_replace('{'.$key.'}', $value, $htmlText);
     }
 }
+
+// ingredients handled separatly
+
+$ingredients = $data["data"]["ingredient"];
+$ingredientText = "";
+
+foreach ($ingredients as $ingredient) {
+    $ingredientText .= "<div class='ingredient'><ul>
+                            <li>Ingredient: ".$ingredient["name"]."</li>
+                            <li>Quantity: ".$ingredient["quantity"].$ingredient["unit"]."</li>";
+    if (!($ingredient["necessary"])) {
+        $ingredientText .= "<li>Optional</li>";
+    }
+    if ($ingredient["comment"]) {
+        $ingredientText .= "<li>".$ingredient["comment"]."</li>";
+    }
+    $ingredientText .= "</ul></div>";
+}
+$htmlText = str_replace("{ingredients}", $ingredientText, $htmlText);
+
 echo $htmlText;
